@@ -1,0 +1,17 @@
+server:
+  port: ":8080"
+  backends:
+    - "http://localhost:8081"
+    - "http://localhost:8082"
+
+redis:
+  addr: "localhost:6379"
+
+cache:
+  ttl: 10s
+
+auth:
+  jwt_secret: "supersecretkey"
+  skip_auth_paths:
+    - "/health"
+    - "/metrics"
